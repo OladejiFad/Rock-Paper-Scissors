@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles/12-rock-paper-scissors.css"/>
+</head>
+<body>
+  <p class="title"> Rock Paper Scissors </p>
+
+  <button 
+    class="move-button js-rock-button">
+    <img src="image/rock.png" 
+    class="move-icon">
+  </button>
+
+  <button 
+    class="move-button js-paper-button">
+    <img src="image/paper.png" 
+    class="move-icon">
+  </button>
+
+
+  <button
+    class="move-button js-scissors-button">
+    <img src="image/scissors.png" class="move-icon">
+  </button>
+
+  <p class="js-result result"></p>
+  <p class="js-moves"></p>
+  <p class="js-score score"></p>
+
+
+  <button onclick="
+
+    score.Wins = 0;
+    score.Losses = 0;
+    score.Ties = 0;
+  /* I removed JSON so my reset button can work perfectly */
+  localStorage.removeItem('score');
+  updateScoreElement();
+    " 
+    class="reset-score-button">Reset Score
+  </button>
+
+  <button onclick="
+    autoPlay();
+    " class="auto-play-button">Auto Play</button>
+<script src="scripts/12-rock-paper-scissors.js" > </script>
+</body>
+</html>
